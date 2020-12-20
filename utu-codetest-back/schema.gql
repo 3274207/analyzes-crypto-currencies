@@ -1,0 +1,21 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ExchangeType {
+  coinName: String!
+  exchangeDate: String!
+  id: ID!
+  marketCap: String!
+  priceClose: String!
+  priceHigh: String!
+  priceLow: String!
+  priceOpen: String!
+  Volume: String!
+}
+
+type Query {
+  exchange: [ExchangeType!]!
+  getHistory(exchangeDate: String!): [ExchangeType!]!
+  hello: String!
+}
