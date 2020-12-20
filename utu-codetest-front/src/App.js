@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
     this.state = {
       tableHead: ['#', 'Coin', '', 'Price','24h','7d','1m','24h Volume','Mkt Cap'],
-      resultList:[['111',12,0.1,-0.3,-0.022,1222,3455]],
+      resultList:[],
       date: new Date(),
     };
   }
@@ -42,7 +42,7 @@ tick() {
   var date7 = '2019-11-27';
   var date30 = '2019-11-04';
 
-  var query = '{getHistory(exchangeDate:"2019-11-11")  {coinName,exchangeDate,priceOpen,priceHigh,priceLow,priceClose,Volume,marketCap}}';
+  var query = '{getHistory(exchangeDate:"2019-12-04")  {coinName,exchangeDate,priceOpen,priceHigh,priceLow,priceClose,Volume,marketCap}}';
   
   fetch('http://localhost:8000/graphql', {
     method: 'POST',
@@ -109,7 +109,7 @@ tick() {
         <div>
         <h1>Hi, Guys!</h1>
         <h2>Here are the hot data at {this.state.date.toLocaleTimeString()}.</h2>
-        <h2>We get it from http://localhost/graphQL.</h2>
+        <h2>We get it from GRAPHQL.</h2>
         </div>
         <div className="UTUData">
           <table id='resulttable' className='tabel'>
@@ -137,10 +137,10 @@ tick() {
                   d1dclass = 'datashow_minus';               
                 } 
                 if (item[3] < 0) {
-                  d30dclass = 'datashow_minus';               
+                  d7dclass = 'datashow_minus';               
                 }
                 if (item[4] < 0) {
-                  d7dclass = 'datashow_minus';               
+                  d30dclass = 'datashow_minus';               
                 } 
                 return(
                 <tr>
