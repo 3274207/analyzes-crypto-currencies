@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+table {
+  width:90%;
+	margin:auto;
+	border:0;
+}
+th {
+  color:#000000;
+  text-align: end;
+}
+th, td {
+	font-size:0.95em;
+	padding:0px;
+	border-collapse:collapse;
+	border: 0px solid #d6d6d6;
+  border-width:0px 0 1px 0;
+  height: 40px;
+}
+
+.datashow_minus{
+  text-align: end;
+  color: #f50915;
+}
+
+.datashow_positive{
+  text-align: end;
+  color: #078868;
+}
+
+.datashow_dollar{
+  text-align: end;
+}
+
+.coinname{
+  font-weight: bolder;
+  font-size: large;
+  width: 300px;
+}
+
+tr td:first-child
+{
+width: 20px;
+}
+
